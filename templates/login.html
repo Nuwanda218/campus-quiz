@@ -1,0 +1,14 @@
+{% extends "auth_base.html" %}
+{% block title %}登录｜毛概刷题网{% endblock %}
+{% block content %}
+<h2 style="margin:0 0 20px">学号登录</h2>
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+<form method="post">
+<input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+<div class="field"><label>10位学号</label><input name="username" required minlength="10" maxlength="10" pattern="[0-9]{10}" inputmode="numeric" autocomplete="username" autofocus placeholder="请输入10位学号"></div>
+<button class="btn" type="submit">登录并继续刷题</button>
+</form>
+{% if registration_enabled %}<p class="switch">尚未注册？<a href="{{ url_for('register') }}">使用学号注册</a></p>{% endif %}
+<p class="note">在手机和电脑上输入同一个10位学号，即可读取同一份答题进度。</p>
+<div class="warning">系统不设置密码。请使用自己的学号，不要使用或冒用他人学号。</div>
+{% endblock %}

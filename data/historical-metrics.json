@@ -1,0 +1,13 @@
+{
+  "kind": "historical_aggregate_only",
+  "registered_accounts": 2868,
+  "answer_records": 849292,
+  "source": "Previously audited historical archive aggregates",
+  "contains_user_records": false,
+  "limitations": [
+    "Not concurrent users",
+    "Not unique natural persons",
+    "Not HTTP request volume",
+    "Not current service activity"
+  ]
+}

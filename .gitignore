@@ -29,3 +29,12 @@ __pycache__/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Generated exports, reports and backup archives
+exports/
+reports/
+*.csv
+*.gz
+*.zip
+*.tar
+*.bak

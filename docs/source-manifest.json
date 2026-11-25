@@ -1,0 +1,80 @@
+{
+  "scope": "Allowlisted historical source files; no historical database or question bank copied.",
+  "files": [
+    {
+      "file": "app.py",
+      "source_sha256": "7dc936d307af2e7b708c2a59cc5bf926c775b40e165ece1be41f2f8c157e49b3",
+      "published_sha256": "e781b5ef6a590a8ef06614c3db4dec5b58dbb18ed6ed6e751ac80faa61071a7d",
+      "changes": [
+        "Use an explicit demo question-set/migration identifier.",
+        "Mark the public demo application version."
+      ]
+    },
+    {
+      "file": "manage.py",
+      "source_sha256": "ac4a2afb6861dce8341738d41c61e3383b69cf2b1dc57b0c74e9e04085bfafd7",
+      "published_sha256": "ac4a2afb6861dce8341738d41c61e3383b69cf2b1dc57b0c74e9e04085bfafd7",
+      "changes": []
+    },
+    {
+      "file": "backup.py",
+      "source_sha256": "d29d354f30fbc3b7b00b2e81a768cfb7e2aff1c9ff95ec300d3ad9d5eac7f5e5",
+      "published_sha256": "d29d354f30fbc3b7b00b2e81a768cfb7e2aff1c9ff95ec300d3ad9d5eac7f5e5",
+      "changes": []
+    },
+    {
+      "file": "migrate_question_scope.py",
+      "source_sha256": "eafb066f556430c1c171baf6f6b9b624828ed7b2413ab43df645f195464a0e3e",
+      "published_sha256": "7c0c7b83705dc65d298ddb61259ebe0925b9a0e7670afdc55908f0aca7594bed",
+      "changes": [
+        "Use an explicit demo question-set/migration identifier."
+      ]
+    },
+    {
+      "file": "validate_question_bank.py",
+      "source_sha256": "feb536d5410086dc861c0323c38a0d5aec56a53739741ada65edbef41c42fa95",
+      "published_sha256": "feb536d5410086dc861c0323c38a0d5aec56a53739741ada65edbef41c42fa95",
+      "changes": []
+    },
+    {
+      "file": "requirements.txt",
+      "source_sha256": "5c7d19bfc45cf82874497ba56c9a830a9309b4d4b016ba537306b0c03c04aabb",
+      "published_sha256": "5c7d19bfc45cf82874497ba56c9a830a9309b4d4b016ba537306b0c03c04aabb",
+      "changes": []
+    },
+    {
+      "file": "Dockerfile",
+      "source_sha256": "cef8f20bc5b8e93e5ac8dfefe733694c78ef06373892b923c83234ecdf6d0024",
+      "published_sha256": "cef8f20bc5b8e93e5ac8dfefe733694c78ef06373892b923c83234ecdf6d0024",
+      "changes": []
+    },
+    {
+      "file": "templates/index.html",
+      "source_sha256": "5b80e2f85d3455aa15310f3e63a0c69cb93c8320e993036d9f5d466101d6aff3",
+      "published_sha256": "5d6ab85776ace56335c19babab4cf85951d7ae0da5957acbb205aa5bc74a1eba",
+      "changes": [
+        "Add a visible synthetic-data/local-demo notice and demo title."
+      ]
+    },
+    {
+      "file": "templates/auth_base.html",
+      "source_sha256": "dc4f8a195b4b02919c4c51f0ea2e2858933eaf8c613e7a13e388b760dbbb7f8e",
+      "published_sha256": "fbc1139c94df13c3717a290b712a9cbbabec197652d872684c729aca03b89360",
+      "changes": [
+        "Add the local-demo notice to authentication pages."
+      ]
+    },
+    {
+      "file": "templates/login.html",
+      "source_sha256": "24ebba676b8458cb57d02a3a50b0804f9e124ee5f16c14833953112efe6e2ce5",
+      "published_sha256": "24ebba676b8458cb57d02a3a50b0804f9e124ee5f16c14833953112efe6e2ce5",
+      "changes": []
+    },
+    {
+      "file": "templates/register.html",
+      "source_sha256": "b526c4629b18ab15f515293fdea1623a8c729fc6cbbf3d611d0f70d43d213294",
+      "published_sha256": "b526c4629b18ab15f515293fdea1623a8c729fc6cbbf3d611d0f70d43d213294",
+      "changes": []
+    }
+  ]
+}

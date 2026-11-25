@@ -1,0 +1,290 @@
+[
+  {
+    "id": "demo-001",
+    "source": "synthetic-demo",
+    "chapter": "Web 基础",
+    "number": 1,
+    "type": "single",
+    "question": "HTTP 中通常表示请求成功的状态码是？",
+    "options": [
+      {
+        "label": "A",
+        "text": "200"
+      },
+      {
+        "label": "B",
+        "text": "404"
+      },
+      {
+        "label": "C",
+        "text": "500"
+      },
+      {
+        "label": "D",
+        "text": "403"
+      }
+    ],
+    "answer": "A",
+    "gradable": true,
+    "status": "合成演示题",
+    "explanation": "200 表示请求成功；404 表示资源未找到。",
+    "analysis": "200 表示请求成功；404 表示资源未找到。",
+    "review_basis": "仅用于展示软件流程，不是原课程题库。",
+    "explanation_source": "synthetic-demo",
+    "evidence_type": "合成演示",
+    "textbook_evidence": [],
+    "external_sources": []
+  },
+  {
+    "id": "demo-002",
+    "source": "synthetic-demo",
+    "chapter": "数据管理",
+    "number": 2,
+    "type": "single",
+    "question": "本项目用来保存本地答题记录的关系数据库是？",
+    "options": [
+      {
+        "label": "A",
+        "text": "SQLite"
+      },
+      {
+        "label": "B",
+        "text": "CSS"
+      },
+      {
+        "label": "C",
+        "text": "HTML"
+      },
+      {
+        "label": "D",
+        "text": "WebSocket"
+      }
+    ],
+    "answer": "A",
+    "gradable": true,
+    "status": "合成演示题",
+    "explanation": "SQLite 是嵌入式关系数据库。",
+    "analysis": "SQLite 是嵌入式关系数据库。",
+    "review_basis": "仅用于展示软件流程，不是原课程题库。",
+    "explanation_source": "synthetic-demo",
+    "evidence_type": "合成演示",
+    "textbook_evidence": [],
+    "external_sources": []
+  },
+  {
+    "id": "demo-003",
+    "source": "synthetic-demo",
+    "chapter": "通信基础",
+    "number": 3,
+    "type": "multi",
+    "question": "下列哪些属于网络或应用层通信相关的技术？",
+    "options": [
+      {
+        "label": "A",
+        "text": "HTTP"
+      },
+      {
+        "label": "B",
+        "text": "WebSocket"
+      },
+      {
+        "label": "C",
+        "text": "SSE"
+      },
+      {
+        "label": "D",
+        "text": "CSS 颜色值"
+      }
+    ],
+    "answer": "ABC",
+    "gradable": true,
+    "status": "合成演示题",
+    "explanation": "前三项与通信有关；CSS 颜色值用于呈现。",
+    "analysis": "前三项与通信有关；CSS 颜色值用于呈现。",
+    "review_basis": "仅用于展示软件流程，不是原课程题库。",
+    "explanation_source": "synthetic-demo",
+    "evidence_type": "合成演示",
+    "textbook_evidence": [],
+    "external_sources": []
+  },
+  {
+    "id": "demo-004",
+    "source": "synthetic-demo",
+    "chapter": "数据管理",
+    "number": 4,
+    "type": "single",
+    "question": "数据库事务失败后，要撤销未提交写入，应执行什么操作？",
+    "options": [
+      {
+        "label": "A",
+        "text": "回滚事务"
+      },
+      {
+        "label": "B",
+        "text": "修改页面标题"
+      },
+      {
+        "label": "C",
+        "text": "增加字体大小"
+      },
+      {
+        "label": "D",
+        "text": "刷新图片"
+      }
+    ],
+    "answer": "A",
+    "gradable": true,
+    "status": "合成演示题",
+    "explanation": "回滚撤销该事务中尚未提交的写入。",
+    "analysis": "回滚撤销该事务中尚未提交的写入。",
+    "review_basis": "仅用于展示软件流程，不是原课程题库。",
+    "explanation_source": "synthetic-demo",
+    "evidence_type": "合成演示",
+    "textbook_evidence": [],
+    "external_sources": []
+  },
+  {
+    "id": "demo-005",
+    "source": "synthetic-demo",
+    "chapter": "工程实践",
+    "number": 5,
+    "type": "multi",
+    "question": "哪些做法有助于避免把真实用户数据上传到公开仓库？",
+    "options": [
+      {
+        "label": "A",
+        "text": "使用合成数据"
+      },
+      {
+        "label": "B",
+        "text": "排除运行数据库"
+      },
+      {
+        "label": "C",
+        "text": "检查实际提交文件"
+      },
+      {
+        "label": "D",
+        "text": "直接提交整个备份目录"
+      }
+    ],
+    "answer": "ABC",
+    "gradable": true,
+    "status": "合成演示题",
+    "explanation": "合成数据、排除数据库及检查提交范围可以减少误上传；备份可能包含真实数据。",
+    "analysis": "合成数据、排除数据库及检查提交范围可以减少误上传；备份可能包含真实数据。",
+    "review_basis": "仅用于展示软件流程，不是原课程题库。",
+    "explanation_source": "synthetic-demo",
+    "evidence_type": "合成演示",
+    "textbook_evidence": [],
+    "external_sources": []
+  },
+  {
+    "id": "demo-006",
+    "source": "synthetic-demo",
+    "chapter": "工程实践",
+    "number": 6,
+    "type": "single",
+    "question": "只允许本机访问的 IPv4 回环地址是？",
+    "options": [
+      {
+        "label": "A",
+        "text": "127.0.0.1"
+      },
+      {
+        "label": "B",
+        "text": "0.0.0.0"
+      },
+      {
+        "label": "C",
+        "text": "255.255.255.255"
+      },
+      {
+        "label": "D",
+        "text": "192.0.2.1"
+      }
+    ],
+    "answer": "A",
+    "gradable": true,
+    "status": "合成演示题",
+    "explanation": "127.0.0.1 是回环地址；0.0.0.0 绑定通常表示监听所有可用 IPv4 接口。",
+    "analysis": "127.0.0.1 是回环地址；0.0.0.0 绑定通常表示监听所有可用 IPv4 接口。",
+    "review_basis": "仅用于展示软件流程，不是原课程题库。",
+    "explanation_source": "synthetic-demo",
+    "evidence_type": "合成演示",
+    "textbook_evidence": [],
+    "external_sources": []
+  },
+  {
+    "id": "demo-007",
+    "source": "synthetic-demo",
+    "chapter": "数据管理",
+    "number": 7,
+    "type": "multi",
+    "question": "更新练习题库前，哪些信息应分别考虑保留？",
+    "options": [
+      {
+        "label": "A",
+        "text": "仍有效题目的进度"
+      },
+      {
+        "label": "B",
+        "text": "历史作答记录"
+      },
+      {
+        "label": "C",
+        "text": "退役题目的归档信息"
+      },
+      {
+        "label": "D",
+        "text": "将所有记录直接清空"
+      }
+    ],
+    "answer": "ABC",
+    "gradable": true,
+    "status": "合成演示题",
+    "explanation": "更新时可分别处理仍有效、历史和退役记录，而不是一律清空。",
+    "analysis": "更新时可分别处理仍有效、历史和退役记录，而不是一律清空。",
+    "review_basis": "仅用于展示软件流程，不是原课程题库。",
+    "explanation_source": "synthetic-demo",
+    "evidence_type": "合成演示",
+    "textbook_evidence": [],
+    "external_sources": []
+  },
+  {
+    "id": "demo-008",
+    "source": "synthetic-demo",
+    "chapter": "数据管理",
+    "number": 8,
+    "type": "single",
+    "question": "要限制同一个提交标识重复写入，数据库中可以使用什么约束？",
+    "options": [
+      {
+        "label": "A",
+        "text": "唯一约束"
+      },
+      {
+        "label": "B",
+        "text": "页面边距"
+      },
+      {
+        "label": "C",
+        "text": "字体颜色"
+      },
+      {
+        "label": "D",
+        "text": "图片宽度"
+      }
+    ],
+    "answer": "A",
+    "gradable": true,
+    "status": "合成演示题",
+    "explanation": "唯一约束可拒绝重复标识，但不代表整个系统已具备所有并发场景下的严格一次性处理。",
+    "analysis": "唯一约束可拒绝重复标识，但不代表整个系统已具备所有并发场景下的严格一次性处理。",
+    "review_basis": "仅用于展示软件流程，不是原课程题库。",
+    "explanation_source": "synthetic-demo",
+    "evidence_type": "合成演示",
+    "textbook_evidence": [],
+    "external_sources": []
+  }
+]

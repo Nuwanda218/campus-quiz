@@ -1,0 +1,55 @@
+{% extends "auth_base.html" %}
+{% block title %}注册｜毛概刷题网{% endblock %}
+{% block content %}
+<h2 style="margin:0 0 20px">注册学号</h2>
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+{% if not registration_enabled %}
+<div class="error">注册功能暂时关闭，请稍后再试。</div>
+{% else %}
+<form method="post" id="registerForm">
+<input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+<div class="field">
+  <label>10位个人学号</label>
+  <input id="usernameInput" name="username" required minlength="10" maxlength="10" pattern="[0-9]{10}" inputmode="numeric" autocomplete="username" autofocus value="{{ request.form.get('username', '') }}" placeholder="请输入10位学号">
+  <div id="usernameStatus" class="availability neutral">请输入本人10位学号。系统会检查是否已注册。</div>
+</div>
+<button class="btn" id="registerBtn" type="submit" disabled>注册并开始第一轮</button>
+</form>
+{% endif %}
+<p class="switch">已有账号？<a href="{{ url_for('login') }}">返回登录</a></p>
+<p class="note">每个10位学号只能注册一次。注册成功后会自动创建第1轮练习。</p>
+<div class="warning">本系统不设置密码，请只使用自己的学号，并妥善保管；在不同设备输入同一学号即可继续原进度。</div>
+{% if registration_enabled %}
+<script>
+(() => {
+  const BASE_PATH = {{ request.script_root|tojson }};
+  const appUrl = (path) => (BASE_PATH || '') + (path.startsWith('/') ? path : '/' + path);
+  const input = document.getElementById('usernameInput');
+  const status = document.getElementById('usernameStatus');
+  const button = document.getElementById('registerBtn');
+  let timer = null, requestNo = 0, controller = null;
+  function show(text, kind){status.textContent=text;status.className='availability '+kind}
+  async function check(){
+    const username=input.value.trim(); button.disabled=true;
+    if(!/^\d{10}$/.test(username)){show('学号必须是10位数字。','unavailable');return}
+    const mine=++requestNo; if(controller)controller.abort(); controller=new AbortController();
+    show('正在检查学号…','neutral');
+    try{
+      const response=await fetch(appUrl('/api/username-availability?username='+encodeURIComponent(username)),{cache:'no-store',signal:controller.signal});
+      const data=await response.json(); if(mine!==requestNo)return;
+      if(data.available){show('✓ '+data.message,'available');button.disabled=false}else show('✕ '+data.message,'unavailable');
+    }catch(error){if(error&&error.name==='AbortError')return;if(mine!==requestNo)return;show('暂时无法实时检测，提交注册时仍会检查学号是否重复。','unavailable')}
+  }
+  input.addEventListener('input',()=>{
+    input.value=input.value.replace(/\D/g,'').slice(0,10); clearTimeout(timer); button.disabled=true;
+    const v=input.value;
+    if(!v){show('请输入本人10位学号。','neutral');return}
+    if(v.length<10){show(`还需输入 ${10-v.length} 位数字。`,'neutral');return}
+    show('停止输入后将检查是否可用。','neutral'); timer=setTimeout(check,500);
+  });
+  input.addEventListener('blur',()=>{clearTimeout(timer);if(/^\d{10}$/.test(input.value.trim()))check()});
+  if(/^\d{10}$/.test(input.value.trim()))check();
+})();
+</script>
+{% endif %}
+{% endblock %}
